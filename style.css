@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P:wght@400;700&display=swap');
+
+* {
+    font-family: 'Press Start 2P', cursive; /* Fonte moderna estilizada que remete a games */
+    font-size: 0.9rem; /* Diminuir o tamanho da fonte nas áreas que não são de título */
+}
+
+body {
+    background-color: #000; /* Cor de fundo mais escura */
+    color: #fff; /* Cor das letras mais clara */
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#input-container {
+    max-width: 500px;
+    background-color: #333; /* Cor de fundo do input mais escura */
+    color: #fff; /* Cor das letras do input mais clara */
+}
+
+#input-container input {
+    background-color: #333; /* Cor de fundo do input mais escura */
+    color: #fff; /* Cor das letras do input mais clara */
+}
+
+#input-container input::placeholder {
+    color: #fff; /* Cor das letras do placeholder branca */
+}
+
+#input-container button {
+    background-color: #444; /* Cor de fundo do botão mais escura */
+    color: #fff; /* Cor das letras do botão mais clara */
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #111; /* Cor de fundo do container principal mais escura */
+}
+
+#video-container {
+    flex-grow: 2; /* Aumentar o espaço do vídeo */
+    margin-right: 20px; /* Espaçamento entre o vídeo e a lista */
+    background-color: #222; /* Cor de fundo do container de vídeo mais escura */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#player {
+    width: 100%;
+    height: 500px; /* Aumentar a altura do vídeo */
+}
+
+#playlist {
+    flex-grow: 1; /* Diminuir a largura da lista */
+    max-width: 250px; /* Largura máxima ajustada */
+    background-color: #333; /* Cor de fundo da playlist mais escura */
+    color: #000; /* Cor das letras da playlist preta */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 500px; /* Garantir que a altura não ultrapasse o container */
+}
+
+.playlist-item {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e9e9e9;
+    background-color: #444; /* Cor de fundo dos itens da playlist mais escura */
+    color: #000; /* Cor das letras dos itens da playlist preta */
+}
+
+.playlist-item span {
+    font-size: 0.9rem;
+    color: #000; /* Cor das letras dos itens da playlist preta */
+}
+
+.playlist-item button {
+    margin-left: 5px;
+    background-color: #555; /* Cor de fundo dos botões dos itens da playlist mais escura */
+    color: #fff; /* Cor das letras dos botões dos itens da playlist mais clara */
+}
+
+.playlist-item:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    #main-container {
+        flex-direction: column;
+    }
+
+    #video-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #playlist {
+        max-width: 100%; /* Deixar a lista ocupar toda a largura em telas menores */
+        max-height: 300px; /* Ajustar a altura para telas menores */
+    }
+
+    #player {
+        height: 300px; /* Ajustar a altura do vídeo para telas menores */
+    }
+}
